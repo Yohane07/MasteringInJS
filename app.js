@@ -48,7 +48,7 @@ boucle();
 // }, 1000)
 
 // ------IIIIIIIICCCCCCCIIIIIIII-------------------
-var para = document.querySelectorAll('p');
+/*var para = document.querySelectorAll('p');
 
 for (var i = 0; i < para.length; i++){
     (function(p){
@@ -56,7 +56,19 @@ for (var i = 0; i < para.length; i++){
             p.classList.toggle('orange')
         }, 1000)
     })(para[i]);
-}
+} */
 
 //Juste pour être suur que ça fonctionne
 //
+
+var ul = document.querySelector('ul');
+var li = document.querySelector('li');
+
+//ul.querySelector('li:nth-child(3)')
+
+var p = document.querySelector('.paragraph');
+var blueir = function (){
+    p.classList.toggle('darkblue')
+}
+
+p.addEventListener('click',blueir);
