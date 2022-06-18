@@ -47,6 +47,7 @@ boucle();
 //     p.classList.toggle('orange')
 // }, 1000)
 
+// ------IIIIIIIICCCCCCCIIIIIIII-------------------
 var para = document.querySelectorAll('p');
 
 for (var i = 0; i < para.length; i++){
@@ -57,4 +58,5 @@ for (var i = 0; i < para.length; i++){
     })(para[i]);
 }
 
+//Juste pour être suur que ça fonctionne
 //
