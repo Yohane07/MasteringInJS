@@ -66,9 +66,50 @@ var li = document.querySelector('li');
 
 //ul.querySelector('li:nth-child(3)')
 
-var p = document.querySelector('.paragraph');
-var blueir = function (){
-    p.classList.toggle('darkblue')
+// ------LES ÉVÈNEMENTS ------------------
+// var p = document.querySelector('.paragraph');
+// var blueir = function (){
+//     p.classList.toggle('darkblue')
+// }
+//
+// p.addEventListener('click',blueir);
+//
+// //- Donc on va faire en sorte que le changement de couleur s'effectue sur sur tous les paragraphes
+//
+// var lesp= document.querySelectorAll('p');
+//
+// for (var i = 0; i<lesp.length;i++){
+//     var p = lesp[i];
+//     var orangeIt= function (){
+//         this.classList.toggle('orange');
+//     }
+//     p.addEventListener('click', orangeIt);
+// }
+
+// Avoir une confirmation avant de quitter le site et que si le user clique sur annuler qu'il annule
+/*
+var liens = document.querySelectorAll('a.externe');
+
+for (var i = 0; i<liens.length; i++){
+    var lien = liens[i];
+   lien.addEventListener('click', function (monevenement){
+        var reponse= window.confirm("Voulez-vous vraiment quittez");
+        monevenement.stopPropagation();
+       console.log('J ai aussi cliqué sur le lien',monevenement);
+       if (reponse==false){
+           monevenement.preventDefault();
+       }
+   })
 }
 
-p.addEventListener('click',blueir);
+document.querySelector('p').addEventListener('click', function (evenement){
+    console.log('J ai aussi cliqué sur le paragraphe',evenement);
+})
+//Naturellement bien entendu si y a un addEventListerner y a cernantinement un removeEventListerner quelque part
+
+*/
+
+// ------LES FORMULAIRES & LES ÉVÈNEMENTS------------------
+
+
+
