@@ -111,5 +111,13 @@ document.querySelector('p').addEventListener('click', function (evenement){
 
 // ------LES FORMULAIRES & LES ÉVÈNEMENTS------------------
 
+// keyCode , fromCharCode, event: keyup/keydown
 
+document.querySelector("#a").addEventListener('keydown', function (event){
+    var lettre = String.fromCharCode(event.keyCode);
+    if (lettre !== "A"){
+        event.preventDefault();
+    }
+
+})
 
