@@ -111,7 +111,9 @@ document.querySelector('p').addEventListener('click', function (evenement){
 
 // ------LES FORMULAIRES & LES ÉVÈNEMENTS------------------
 
-// keyCode , fromCharCode, event: keyup/keydown
+/* keyCode , fromCharCode, event: keyup, keydown that stop taping others letters on the keybord, then there is a lot
+kind of Event as EventListener, KeyboardEvent
+*
 
 document.querySelector("#a").addEventListener('keydown', function (event){
     var lettre = String.fromCharCode(event.keyCode);
@@ -121,3 +123,61 @@ document.querySelector("#a").addEventListener('keydown', function (event){
 
 })
 
+
+document.querySelector('#form').addEventListener('submit', function (event){
+    var cp = document.querySelector('#cp');
+    if (cp.value.length !== 5){
+        window.alert('La taille du code postal n\'est pas égale à 5');
+        event.preventDefault();
+    }
+})
+
+document.querySelector('#form').addEventListener('submit', function (event){
+    var mention = document.querySelector("#mentionsLegales");
+
+    if (mention.checked === false){
+        window.alert('Veuillez accepter les mentions légales pour continuer');
+        event.preventDefault();
+    }
+})
+
+
+document.querySelector('#form').addEventListener('submit', function (event){
+    var age = parseInt(document.querySelector('#age').selectedOptions[0].value, 10)
+    if (age < 18){
+        window.alert('Vous ne pouvez pas passez le permis');
+        event.preventDefault();
+    }
+})
+*/
+
+/* Lorsqu'on clique sur le bouton que ça affiche le spoiler et que le bouton disparaisse après qu'on ait
+ cliqué dessus
+
+var spoiler = document.querySelector('.spoiler button');
+
+  spoiler.addEventListener('click', function (){
+    this.nextElementSibling.classList.add('visible');
+    this.parentNode.removeChild(this);
+})
+
+// On  refait un code qui permet de gérer tous ceux qui ont la classe spoiler
+ */
+
+var spoilerAll = document.querySelectorAll('.spoiler');
+
+var createSpoilerButton = function (spoiler){
+    var span = document.createElement('span');
+    span.className = 'spoiler-content';
+    span.innerHTML = spoiler.innerHTML;
+
+    var button = document.createElement('button');
+    button.textContent='Afficher le spoiler';
+
+    spoiler.appendChild(button);
+    spoiler.appendChild(span)
+}
+
+for ( var e = 0; e <spoilerAll.length; e++){
+    createSpoilerButton(spoilerAll[e]);
+}

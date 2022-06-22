@@ -80,6 +80,18 @@
 		p{
 			transition: 1.5s;
 		}
+
+		.spoiler-content{
+			display: inline-block;
+			opacity: 0;
+			overflow: hidden;
+			transition: 0.5s;
+		}
+
+		.spoiler-content.visible{
+			display: inline;
+			opacity: 1;
+		}
 	</style>
 	<title>Be-Cool</title>
 </head>
@@ -111,8 +123,47 @@
 <!--		<a href="https://yohane-endoke.fr/" class="externe">Mon portefolio</a>-->
 <!--	</p>-->
 
-	<input type="text" id="a">
+<!--	<input type="text" id="a">
 
+	<form action="#" id="form">
+		<input type="text" id="cp">
+		<input type="checkbox" id="mentionsLegales">J'accepte les mentions légales
+		<select name="age" id="age">
+			<option value="4">4</option>
+			<option value="23">23</option>
+		</select>
+		<input type="submit" value="Envoyer">
+	</form>
+	-->
+
+	<p class="spoiler">
+		Lorem yes ipsum dolor sit amet, consectetur adipisicing elit. Culpa ducimus explicabo optio quam voluptate.
+		Adipisci asperiores est fuga ipsum obcaecati recusandae. Culpa dolores exercitationem modi,
+		officiis quaerat voluptate voluptates voluptatum!
+	</p>
+
+	<p class="spoiler">
+		<button>Afficher le spoiler</button>
+		<span class="spoiler-content">Analysse ne meurt pas mais c'est Bonnie qui meurt au finish</span>
+	</p>
+
+	<p>
+		<span class="spoiler">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur delectus,
+			dolor earum illo inventore labore laboriosam magnam nesciunt nihil officia perferendis repellendus
+			similique temporibus tenetur veniam veritatis vero voluptatibus?
+		</span>
+		<span class="spoiler">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, distinctio officia? Ad adipisci,
+			aut commodi consectetur debitis <span class="spoiler-content">doloremque eligendi laudantium, nam quidem quisquam</span>
+			sit velit vitae. Quis recusandae vel voluptate.
+		</span>
+		<span class="spoiler">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequuntur deleniti
+			dignissimos dolor doloribus eaque fugiat harum ipsa itaque, magni molestiae molestias mollitia natus
+			repellat sed unde vel velit, voluptatem.
+		</span>
+	</p>
 	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
